@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "bytebank"
+  "defaultProject": "bytebank",
+  "cli": {
+    "analytics": "2d5dcfd2-4768-46db-9f36-54994871429f"
+  }
 }
