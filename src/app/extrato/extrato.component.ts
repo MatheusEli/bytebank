@@ -17,7 +17,7 @@ export class ExtratoComponent implements OnInit {
     this.service.todas().subscribe((transferencias: Transferencia[]) => {
       console.table(transferencias);
       this.transferencias = transferencias;
-    })
+    });
 
   }
 }
