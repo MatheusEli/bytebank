@@ -1,0 +1,24 @@
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">Data</th>
+    <th class="tabela__cabecalho__conteudo">Valor</th>
+    <th class="tabela__cabecalho__conteudo">Destino</th>
+  </thead>
+  <tbody *ngIf="transferencias?.length > 0; else listaVazia">
+    <tr *ngFor="let transferencia of transferencias" class="tabela__linha">
+      <td class="tabela__conteudo">
+        <p>{{transferencia?.data | date:'short'}}</p>
+      </td>
+      <td class="tabela__conteudo">
+        <p>{{transferencia?.valor | currency}}</p>
+      </td>
+      <td class="tabela__conteudo">
+        <p>{{transferencia?.destino}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #listaVazia>
+  <p>Não há extratos para exibir!</p>
+</ng-template>
